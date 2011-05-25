@@ -1,0 +1,229 @@
+/* Big Buttons ----------------------------------------------------------------- */
+
+.big-button {
+    background-color: rgba(0,0,0,0.05);
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+    padding: 10px;
+    display: inline-block;
+
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1) inset;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1) inset;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1) inset;
+
+    width: auto;
+}
+
+.big-button .target {
+    padding: 15px 15px 12px 15px;
+    text-transform: uppercase;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    display: inline-block;
+    text-shadow: -1px 1px 0px rgba(255,255,255,0.2);
+    text-decoration: none;
+    font-family: arial;
+    letter-spacing: 1px;
+}
+
+.big-button.green .target {
+    background-color: #A8DB5F;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A8DB5F),
+        color-stop(1.0, #69BA3A)
+    );
+    background-image: -moz-linear-gradient(
+        top,
+        #A8DB5F 0%,
+        #69BA3A 100%
+    );
+    background-image: -ms-linear-gradient(
+        top,
+        #A8DB5F 0%,
+        #69BA3A 100%
+    );
+    background-image: -o-linear-gradient(
+        top,
+        #A8DB5F 0%,
+        #69BA3A 100%
+    );
+    background-image: linear-gradient(
+        top,
+        #A8DB5F 0%,
+        #69BA3A 100%
+    );
+
+    color: #4A8B26;
+}
+
+.big-button.blue .target {
+    background-color: #7EBCFC;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #B0D4FC),
+        color-stop(0.04, #7EBCFC),
+        color-stop(1.0, #4C9BEF)
+    );
+    background-image: -moz-linear-gradient(
+        top,
+        #B0D4FC 0%,
+        #7EBCFC 4%,
+        #4C9BEF 100%
+    );
+    background-image: -ms-linear-gradient(
+        top,
+        #B0D4FC 0%,
+        #7EBCFC 4%,
+        #4C9BEF 100%
+    );
+    background-image: -o-linear-gradient(
+        top,
+        #B0D4FC 0%,
+        #7EBCFC 4%,
+        #4C9BEF 100%
+    );
+    background-image: linear-gradient(
+        top,
+        #B0D4FC 0%,
+        #7EBCFC 4%,
+        #4C9BEF 100%
+    );
+
+    color: #2B6AAD;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+.big-button.blue .border-wrapper {
+    background-color: #6CBBFF;
+    padding: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.big-button.green.raised {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    height: 49px;
+}
+
+.big-button.green.raised .target {
+    height: 15px;
+}
+
+.big-button.green.raised .border-wrapper {
+    background-color: #A7DC5E;
+    padding: 1px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    height: 42px;
+
+    display: inline-block;
+
+    position: relative;
+    top: -20px;
+}
+
+.big-button.green.raised .background {
+    height: 24px;
+    padding-bottom: 5px;
+    background-color: #639543;
+    display: inline-block;
+
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0, #A3D683),
+        color-stop(0.03, #639543),
+        color-stop(0.97, #639543),
+        color-stop(1, #A3D683)
+    );
+    background-image: -moz-linear-gradient(
+        left,
+        #A3D683 0%,
+        #639543 3%,
+        #639543 96%,
+        #A3D683 100%
+    );
+    background-image: -ms-linear-gradient(
+        left,
+        #A3D683 0%,
+        #639543 3%,
+        #639543 96%,
+        #A3D683 100%
+    );
+    background-image: -o-linear-gradient(
+        left,
+        #A3D683 0%,
+        #639543 3%,
+        #639543 96%,
+        #A3D683 100%
+    );
+    background-image: linear-gradient(
+        left,
+        #A3D683 0%,
+        #639543 3%,
+        #639543 96%,
+        #A3D683 100%
+    );
+
+    -webkit-border-bottom-left-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+
+    -moz-border-radius-bottomleft: 6px;
+    -moz-border-radius-bottomright: 6px;
+
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+
+    position: relative;
+    top: 20px;
+
+    /* box-shadow: 0 0 5px rgba(0,0,0,0.2); */
+}
+
+.big-button.green.raised .border-wrapper {
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+}
+
+.big-button.green.raised .background {
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+    position: relative;
+}
+
+.big-button.green.raised .background:hover {
+}
+
+.big-button.green.raised .background:hover .border-wrapper {
+    position: relative;
+    top: -15px
+}
+
