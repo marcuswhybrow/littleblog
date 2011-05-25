@@ -1,0 +1,15 @@
+{% extends "posts/posts_base.html" %}
+
+{% block content %}
+    <h1>Post List</h1>
+    <p>This is a list of posts</p>
+
+    {% for post in post_list %}
+        <div class="post">
+            <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+        </div>
+    {% empty %}
+        <p>There are no posts currently.</p>
+    {% endfor %}
+
+{% endblock %}
