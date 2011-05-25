@@ -34,9 +34,21 @@
 
 </head>
 
-<body>
+<body id="{% block body_id %}body-index{% endblock %}">
     <div id="container">
-        <header>
+        <header id="global-header">
+            <h1>Marcus Whybrow</h1>
+            <div id="global-nav">
+                <a href="{% url index %}" id="gn-index" class="item">Home</a>
+                <a href="{% url posts:post_list %}" id="gn-articles" class="item">Articles</a>
+                <a href="" id="gn-portfolio" class="item">Portfolio</a>
+                <a href="" id="gn-cv" class="item">CV</a>
+
+                <form action="" method="post">
+                    <input id="gn-search" type="text" name="search" />
+                    {% csrf_token %}
+                </form>
+            </div>
         </header>
         
         <div id="main">
@@ -60,6 +72,10 @@
     <script src="{{ STATIC_URL }}assets/js/dd_belatedpng.js"></script>
     <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
     <![endif]-->
+
+    <!-- Page specific scripts -->
+    {% block scripts %}{% endblock %}
+    <!-- End of page specific scripts -->
 
 
     <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->

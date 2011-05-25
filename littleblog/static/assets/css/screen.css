@@ -169,6 +169,213 @@ a:hover { color: #036; }
 
 
 
+/* Layout ----------------------------------------------------------------- */
+
+html {
+    background-color: #fafafa;
+}
+
+body {
+    font-size: 16px;
+}
+
+#container {
+    width: 700px;
+    margin: 20px auto;
+}
+
+#main {
+    margin: 20px;
+}
+
+#global-header {
+    margin: 20px;
+}
+
+#global-header h1 {
+    font-size: 30px;
+    font-family: georgia;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#global-nav {
+    background-color: rgba(0,0,0,0.05);
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    padding: 10px 10px 0 10px;
+
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1) inset;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1) inset;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1) inset;
+
+    margin-top: 20px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+#global-nav .item {
+    padding: 10px 15px 12px 15px;
+    display: inline-block;
+
+    z-index: 200;
+    position: relative;
+    color: #666;
+    text-decoration: none;
+
+    font-family: arial;
+
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.9);
+}
+
+#body-index #gn-index,
+#body-articles #gn-articles,
+#body-portfolio #gn-portfolio,
+#body-cv #gn-cv {
+    background-color: #fafafa;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #fff),
+        color-stop(0.5, #fafafa)
+    );
+
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#gn-search {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 15px 5px 0px;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    border: 1px solid #ddd;
+}
+
+/* Post Detail ------------------------------------------------------------ */
+
+#main h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#main p {
+    margin-bottom: 20px;
+}
+
+#main pre {
+    margin-bottom: 20px;
+    
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    line-height: 1.5em;
+    color: #444;
+    overflow: auto;
+    
+    -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0 0 5px inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.07) 0 0 5px inset;
+    box-shadow: rgba(0, 0, 0, 0.07) 0 0 5px inset;
+    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    
+    word-wrap: normal;
+
+    max-height: 200px;
+}
+
+#main pre,
+#main code {
+    font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+    white-space: pre;
+}
+
+#main pre::-webkit-scrollbar {
+    height:8px;
+    width:8px;
+}
+#main pre::-webkit-scrollbar-track-piece {
+    margin-bottom: 10px;
+    background-color: #e5e5e5;
+    border-radius: 3px;
+}
+#main pre::-webkit-scrollbar-thumb:vertical {
+    height: 25px;
+    background-color: #ccc;
+    -webkit-border-radius: 2px;
+}
+#main pre::-webkit-scrollbar-thumb:horizontal {
+    width: 25px;
+    background-color: #ccc;
+    -webkit-border-radius: 2px;
+}
+
+#main .about-author {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+
+    border-radius: 3px;
+
+    margin: 100px 0 20px;
+
+    font-size: 13px;
+    line-height: 1.5em;
+    color: #aaa;
+}
+
+#main .about-author img {
+    float: left;
+    margin-right: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+
+#main .disqus-wrapper {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3) inset;
+
+    border-radius: 3px;
+}
+
+
+/* Font Styles ------------------------------------------------------------ */
+
+#main h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#main h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+
+}
+
+#main h4 {
+    margin-bottom: 5px;
+}
+
 /* Big Buttons ------------------------------------------------------------ */
 
 .big-button {
