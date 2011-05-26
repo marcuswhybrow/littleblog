@@ -15,12 +15,20 @@ class Post(models.Model):
 
     # Markdown components
     body_markdown = models.TextField()
-    body_html = models.TextField()
+    body_html = models.TextField(blank=True, editable=False)
+
+    # Published/Edited times
+    pub_date = models.DateTimeField(auto_now_add=True, editable=False,
+                                    db_index=True)
+    edit_date = models.DateTimeField(auto_now=True, editable=False,
+                                     db_index=True)
 
     def save(self, *args, **kwargs):
-        # Get the slug from the title
         from django.template.defaultfilters import slugify
+        import markdown
+        
         self.slug = slugify(self.title)
+        self.body_html = markdown.markdown(self.body_markdown)
         super(Post, self).save(*args, **kwargs)
 
     @models.permalink
