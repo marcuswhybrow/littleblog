@@ -12,13 +12,24 @@
             <span class="inner">Flickr</span>
         </a>
     </div>
-    <ul id="repos">
-    </ul>
+    
+    <a class="elsewhere ew-stackoverflow" href="http://stackoverflow.com/users/166938/marcus-whybrow">
+        <span class="inner"
+            title="profile for Marcus Whybrow at Stack Overflow, Q&A for professional and enthusiast programmers">
+            StackOverlfow
+        </span>
+    </a>
+    
+
     <h2>About Me</h2>
     <p>I am a web developer, musician, <a href="">photographer</a> and Nottingham University
     Computer Science student. I always have a <a href="">project on the go</a>, and love
     creating web applications using the fantastic <a
         href="http://djangoproject.com">Django</a> framework.</p>
+
+    <ul id="repos">
+    </ul>
+
 
     <h2>Latest Posts</h2>
     <p>Some of my latest posts.</p>
@@ -43,7 +54,7 @@
             me.repos(function(data) {
                 for (var i = 0; i < data.repositories.length; i++) {
                     var repo = data.repositories[i];
-                    $repos.append('<li>'+repo.name+' ('+repo.language+')</li>');
+                    $repos.append('<li><a href="'+repo.url+'">'+repo.name+'</a> ('+repo.language+')</li>');
                 }
             });
         });
