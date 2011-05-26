@@ -2,3 +2,4 @@
 *.pyc
 littleblog/settings/local.py
 *.db
+pip-log.txt

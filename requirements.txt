@@ -2,3 +2,6 @@ Django==1.3
 
 elementtree
 markdown
+
+https://github.com/toastdriven/django-haystack/tarball/v1.2.2
+whoosh

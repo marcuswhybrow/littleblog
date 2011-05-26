@@ -48,8 +48,9 @@
                 <a href="" id="gn-portfolio" class="item">Portfolio</a>
                 <a href="" id="gn-cv" class="item">CV</a>
 
-                <form action="" method="post">
-                    <input id="gn-search" type="text" name="search" />
+                <form action="{% url haystack_search %}" method="get">
+                    <input id="gn-search" type="text" name="q" 
+                    value="{{ form.q.value }}" />
                     {% csrf_token %}
                 </form>
             </div>

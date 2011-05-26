@@ -114,6 +114,10 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
 
+    # Third part apps
+    'haystack',
+
+    # Project apps
     'littleblog.posts',
 )
 
@@ -140,3 +144,6 @@ LOGGING = {
     }
 }
 
+HAYSTACK_SITECONF = 'littleblog.search_sites'
+HAYSTACK_SEARCH_ENGINE = 'whoosh'
+HAYSTACK_WHOOSH_PATH = os.path.join(SITE_ROOT, 'search_index')

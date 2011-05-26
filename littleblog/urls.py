@@ -9,6 +9,8 @@ urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
     url(r'^posts/', include('littleblog.posts.urls', namespace='posts')),
 
+    (r'^search/', include('haystack.urls')),
+
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
