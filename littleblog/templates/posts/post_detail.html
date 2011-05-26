@@ -4,11 +4,12 @@
     <article>
         <header>
             <h1>{{ post.title }}</h1>
-            <p><small>{{ post.pub_date }}</small></p>
+            <p class="post-date"><small>{{ post.pub_date }}</small></p>
         </header>
         <div class="post-detail-body">
             {{ post.body_html|safe }}
         </div>
+        <p class="edit-date"><small>Last Updated {{ post.edit_date }}</small></p>
     </article>
 
     <div class="about-author clearfix">
