@@ -845,9 +845,6 @@ a:hover {
     height: 300px;
 
     overflow: hidden;
-
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
 }
 
 #vault-button {
@@ -1107,6 +1104,32 @@ body { -webkit-animation: bugfix infinite 1s; }
     -ms-transform: translate(0, -200px);
     -o-transform: translate(0, -200px);
     transform: translate(0, -200px)
+}
+
+
+/* Hire me ---------------------------------------------------------------- */
+
+.hire-me {
+    margin-top: 20px;
+    text-align: center;
+
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.hire-me p {
+    font-size: 20px;
+    font-style: italic;
+    display: inline;
+    margin-top: 20px;
+    color: #666;
+    text-shadow: 1px 1px 0 #fff;
+    position: relative;
+    top: 7px;
+}
+
+.hire-me .big-button .background {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
 
