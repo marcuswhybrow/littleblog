@@ -1,0 +1,24 @@
+{% extends "posts/posts_base.html" %}
+
+{% block meta %}
+    {{ block.super }}
+    <link rel="alternate" type="application/rss+xml" title="Tag List"
+        href="{% url posts:tag_detail_feed slug=tag.slug %}" />
+{% endblock %}
+
+{% block content %}
+    <h1>Tag: {{ tag.name }}</h1>
+    <div class="tag-decription">
+        {{ tag.description_html|safe }}
+    </div>
+
+    <div class="tag-posts">
+        {% for post in tag.posts.all %}
+            <div class="post">
+                <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+            </div>
+        {% empty %}
+            <p>This tag has no posts</p>
+        {% endfor %}
+    </div>
+{% endblock %}

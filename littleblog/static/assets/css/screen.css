@@ -339,7 +339,7 @@ body {
 
     border-radius: 3px;
 
-    margin: 0 0 20px;
+    margin: 30px 0 20px;
 
     font-size: 13px;
     line-height: 1.5em;
@@ -410,7 +410,52 @@ body {
 }
 
 #main .edit-date {
-    margin: 60px 0 60px;
+    margin: 60px 0 30px;
+}
+
+#main .tag-list {
+    list-style: none;
+    margin: 0;
+}
+
+#main .tag-list li {
+    float: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin: 0 10px 10px 0;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#main .tag-list li a {
+    display: block;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3) inset;
+    -moz-box-shadow: 0 0 rgba(0,0,0,0.3) #ddd inset;
+    box-shadow: 0 0 rgba(0,0,0,0.3) #ddd inset;
+
+    background-color: rgba(0,0,0,0.03);
+
+    color: #888;
+    text-shadow: 1px 1px 0 #fff;
+
+    border: 1px solid rgba(0,0,0,0.3);
+
+    -webkit-transition: all 0.2s ease-out;
+}
+
+#main .tag-list li a:hover {
+    background-color: rgba(0,0,0,0.3);
+    color: #000;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.4); 
 }
 
 /* Front Page ------------------------------------------------------------- */
