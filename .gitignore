@@ -1,5 +1,8 @@
 *.swp
 *.pyc
-littleblog/settings/local.py
 *.db
 pip-log.txt
+
+littleblog/settings/local.py
+littleblog/search_index/*
+

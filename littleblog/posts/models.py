@@ -23,12 +23,49 @@ class Post(models.Model):
     edit_date = models.DateTimeField(auto_now=True, editable=False,
                                      db_index=True)
 
+    def _add_permalinks_to_body_header_elements(self):
+        from django.template.defaultfilters import slugify
+        import re
+
+        regex = r'<(h[1-6]{1})>([^<]*)</\1>'
+        iterable = re.finditer(regex, self.body_html)
+
+        replacements = []
+        identifiers = []
+        for match in iterable:
+            element, text = match.groups()
+            identifier = slugify(text)
+
+            # Get a unique identifier
+            unique_identifier = identifier
+            count = 2
+            while unique_identifier in identifiers:
+                unique_identifier = '%s-%d' % (identifier, count)
+                count += 1
+            identifiers.append(unique_identifier)
+
+            replacement = r'<\1 id="%(id)s">\2 <a href="#%(id)s" ' \
+                r'title="Permalink to this heading" ' \
+                r'class="heading-permalink">&para;</a></\1>' \
+                    % {'id': unique_identifier}
+
+            before = self.body_html[match.start():match.end()]
+            after = match.expand(replacement)
+            replacements.append((before, after))
+
+        for before, after in replacements:
+            self.body_html = self.body_html.replace(before, after, 1)
+
+
     def save(self, *args, **kwargs):
         from django.template.defaultfilters import slugify
         import markdown
         
         self.slug = slugify(self.title)
         self.body_html = markdown.markdown(self.body_markdown)
+
+        self._add_permalinks_to_body_header_elements()
+
         super(Post, self).save(*args, **kwargs)
 
     @models.permalink

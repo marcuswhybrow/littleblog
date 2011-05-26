@@ -4,6 +4,7 @@
     <article>
         <header>
             <h1>{{ post.title }}</h1>
+            <p><small>{{ post.pub_date }}</small></p>
         </header>
         <div class="post-detail-body">
             {{ post.body_html|safe }}
@@ -29,6 +30,9 @@
 
 {% block scripts %}
     {{ block.super }}
+    <script type="text/javascript" charset="utf-8"
+        src="https://github.com/pmcelhaney/jQuery-Slugify-Plugin/raw/master/jquery.slugify.js">
+    </script>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'example'; // required: replace example with your forum shortname
@@ -44,7 +48,7 @@
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+        })();        
     </script>
 
 {% endblock %}
