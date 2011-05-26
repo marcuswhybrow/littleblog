@@ -197,6 +197,7 @@ body {
     font-family: georgia;
     font-weight: bold;
     font-style: italic;
+    text-align: center;
 }
 
 #global-nav {
@@ -331,6 +332,9 @@ body {
 #main .about-author {
     padding: 20px;
     background-color: #fff;
+
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.3);
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 
     border-radius: 3px;
@@ -345,9 +349,16 @@ body {
 #main .about-author img {
     float: left;
     margin-right: 20px;
+
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);=
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
 
     -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 
     border: 2px solid #fff;
 }
@@ -355,6 +366,13 @@ body {
 
 #main .about-author:hover img {
     -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+
+    -webkit-box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 40px rgba(0,0,0,0.3);
     box-shadow: 0 0 40px rgba(0,0,0,0.3);
 }
 
@@ -363,10 +381,60 @@ body {
 #main .disqus-wrapper {
     padding: 20px;
     background-color: #fff;
+
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3) inset;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3) inset;
     box-shadow: 0 0 5px rgba(0,0,0,0.3) inset;
 
+    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
     border-radius: 3px;
 }
+
+#elsewhere {
+    margin: 0 0 20px 0 ;
+}
+
+.elsewhere {
+    display: inline-block;
+    text-indent: -9999px;
+    overflow: hidden;
+    padding: 10px;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3) inset;
+    background-color: #fff;
+}
+
+.elsewhere .inner {
+    height: 53px;
+    display: block;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+.elsewhere:hover .inner {
+    background-position: 0 -53px;
+}
+
+.ew-github .inner {
+    width: 120px;
+    background: url('/static/assets/img/logos/github.png') no-repeat top left;
+}
+
+.ew-linkedin .inner {
+    width: 188px;
+    background: url('/static/assets/img/logos/linkedin.png') no-repeat top left;
+}
+
+.ew-twitter .inner {
+    width: 144px;
+    background: url('/static/assets/img/logos/twitter.png') no-repeat top left;
+}
+
+.ew-flickr .inner {
+    width: 135px;
+    background: url('/static/assets/img/logos/flickr.png') no-repeat top left;
+}
+
 
 
 /* Font Styles ------------------------------------------------------------ */

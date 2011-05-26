@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <div id="elsewhere">
+        <a class="elsewhere ew-github" href="http://github.com/marcuswhybrow/">
+            <span class="inner">GitHub</span>
+        </a>
+        <a class="elsewhere ew-linkedin" href="http://uk.linkedin.com/in/marcuswhybrow">
+            <span class="inner">LinkedIn</span>
+        </a>
+        <a class="elsewhere ew-flickr" href="http://flickr.com/marcuswhybrow">
+            <span class="inner">Flickr</span>
+        </a>
+    </div>
+    <ul id="repos">
+    </ul>
     <h2>About Me</h2>
     <p>I am a web developer, musician, <a href="">photographer</a> and Nottingham University
     Computer Science student. I always have a <a href="">project on the go</a>, and love
@@ -16,4 +29,23 @@
             <a href="" class="target">Hire me!</a>
         </span>
     </span>
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script type="text/javascript" charset="utf-8"
+        src="https://github.com/fitzgen/github-api/raw/master/github.js">
+    </script>
+    <script type="text/javascript" charset="utf-8">
+        $(function() {
+            var $repos = $('#repos');
+            var me = gh.user("marcuswhybrow");
+            me.repos(function(data) {
+                for (var i = 0; i < data.repositories.length; i++) {
+                    var repo = data.repositories[i];
+                    $repos.append('<li>'+repo.name+' ('+repo.language+')</li>');
+                }
+            });
+        });
+    </script>
 {% endblock %}
