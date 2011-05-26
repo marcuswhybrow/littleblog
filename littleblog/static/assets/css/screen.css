@@ -181,10 +181,17 @@ body {
 
 a {
     text-decoration: none;
+    color: #232323;
+    font-weight: bold;
+}
+
+a:visited,
+a:active {
+    color: #232323;
 }
 
 a:hover {
-    text-shadow: 0 0 5px #000;
+    text-shadow: 0 0 0.3em #000;
     color: #fff;
 }
 
@@ -257,6 +264,12 @@ a:hover {
 
     -webkit-border-top-left-radius: 3px;
     -webkit-border-top-right-radius: 3px;
+
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
