@@ -45,13 +45,12 @@
             <div id="global-nav">
                 <a href="{% url index %}" id="gn-index" class="item">Home</a>
                 <a href="{% url posts:post_list %}" id="gn-articles" class="item">Articles</a>
-                <a href="" id="gn-portfolio" class="item">Portfolio</a>
-                <a href="" id="gn-cv" class="item">CV</a>
+                <a href="{% url portfolio %}" id="gn-portfolio" class="item">Portfolio</a>
+                <a href="{% url cv %}" id="gn-cv" class="item">CV</a>
 
                 <form action="{% url haystack_search %}" method="get">
                     <input id="gn-search" type="text" name="q" 
                     value="{{ form.q.value }}" />
-                    {% csrf_token %}
                 </form>
             </div>
         </header>

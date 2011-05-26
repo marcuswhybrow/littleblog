@@ -14,6 +14,10 @@ urlpatterns = patterns('',
 
     (r'^search/', include('haystack.urls')),
 
+    url(r'^portfolio/$', TemplateView.as_view(template_name='portfolio.html'),
+        name='portfolio'),
+    url(r'^cv/$', TemplateView.as_view(template_name='cv.html'), name='cv'),
+
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
