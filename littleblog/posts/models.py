@@ -90,6 +90,8 @@ class Post(models.Model):
     edit_date = models.DateTimeField(auto_now=True, editable=False,
                                      db_index=True)
     tags = models.ManyToManyField('posts.Tag', related_name='posts')
+    
+    guid = models.CharField(blank=True, max_length=100)
 
     def save(self, *args, **kwargs):
         from django.template.defaultfilters import slugify
@@ -110,3 +112,9 @@ class Post(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.title
+    
+    def get_disqus_url(self):
+        return 'http://marcuswhybrow.net%s' % self.get_absolute_url()
+    
+    def get_disqus_identifier(self):
+        return self.guid or self.pk
